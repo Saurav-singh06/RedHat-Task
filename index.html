@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>RedHat</title>
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css" integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N" crossorigin="anonymous">
+
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-Fy6S3B9q64WdZWQUiU+q4/2Lc9npb8tCaSX9FK7E8HnRr0Jz8D6OP9dO5Vg3Q9ct" crossorigin="anonymous"></script>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.3/umd/popper.min.js" integrity="sha384-vFJXuSJphROIrBnz7yo7oB41mKfc8JzQZiCq4NCceLEaO4IHwicKwpJf9c9IpFgh" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/js/bootstrap.min.js" integrity="sha384-alpBpkh1PFOepccYVYDB4do5UnbKysX5WZXm3XxPqe5iKTfUKjNkCk9SaVuEZflJ" crossorigin="anonymous"></script>
+
+    <link rel="stylesheet" href="style.css" />
+    <script type="text/javascript">
+     $(document).ready(function(){
+        $("#ModalLong").modal('hide');
+      });
+    </script>
+  
+  </head>
+  <body>
+    <!-- Nav -->
+    <nav class="navbar bg-dark">
+      <div class="container">
+        <img
+          src="./assets/logo.png"
+          alt="Logo"
+          width="180"
+          height="40"
+          class="d-inline-block align-text-top"
+        />
+        <div class="" style="color: #fff">Apprenticeship Registration Form</div>
+      </div>
+    </nav>
+
+    <!-- Modal -->
+    <div class="modal" id="ModalLong" tabindex="-1" role="dialog" aria-labelledby="ModalLongTitle" aria-hidden="true">
+      <div class="modal-dialog" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="ModalLongTitle">Detail</h5>
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close" style="outline: none;">
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+          <div class="modal-body" style="font-weight: bold;">
+            <div id="modal-fname"></div>
+            <div id="modal-lname"></div>
+            <div id="modal-email"></div>
+            <div id="modal-Mnos"></div>
+            <div id="modal-clg"></div>
+            <div id="modal-dob"></div>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+<!-- Form  -->
+    <div class="container">
+    <div class="offset-sm-1 col-sm-11">
+    <div class="card text-blank border-0 mt-5">
+        <div class="card-body"id="main" style="background-color:#ffffff;">
+               <div class="card-title text-center">
+                    <h3 style="font-family: sans-serif;">Apprenticeship Registration Form</h3>
+               </div>
+               <br>
+               
+            <form id="form">
+                <div class="form d-flex mt-4">
+                        <div class="form-group col-sm-6 " style="padding: 0px -15px;">
+                            <label for="fname">First Name</label>
+                            <input type="text" class="form-control firstname border-light" placeholder="Enter First Name" id="fname"   required style=" border-style: outset; width: 75%;">
+                        </div>
+
+                        <div class="form-group col-sm-6">
+                            <label for="lname">Last Name</label>
+                            <input type="text" class="form-control lastname border-light" placeholder="Enter Last Name" id="lname"  required style=" border-style: outset; width: 75%; ">
+                        </div>
+                        
+                </div>
+                <div class="form-row d-flex mt-4">
+                        <div class="form-group col-sm-6">
+                            <label for="email">Email Address</label>
+                            <input type="Email" class="form-control email border-light" id="email" placeholder="Enter Email Address " required style=" border-style: outset; width: 75%;">
+                    <div class="alert alert-danger" id="emailalert" style="display:none; width: 75%;">Invalid Email </div>
+                        </div>
+
+                        <div class="form-group col-sm-6 ">
+                            <label for="mobile">Mobile Number</label>
+                            <input type="Number" class="form-control phone border-light" id="mobile" placeholder="Enter Phone No." required style=" border-style: outset; width: 75%;">
+                            <div class="alert alert-danger" id="mblalert" style="display:none; width: 75%;">Invalid Mobile Number</div>
+                        </div>
+                </div>
+
+                <div class="form-row d-flex mt-4">
+                    <div class="form-group col-sm-6">
+                        <label for="location">Current Location</label>
+                        <input type="text" class="form-control location border-light" id="location" placeholder="Enter Your Location" required style=" border-style: outset; width: 75%;">
+                        <div class="alert alert-danger" id="locationalert" style="display:none; width: 75%;">Location is required</div>
+                    </div>
+
+                    <div class="form-group col-sm-6 ">
+                        <label for="validationDefault02">Gender</label>
+                        <div class="d-flex">
+                            <div class="form-check">
+                                <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1">
+                                <label class="form-check-label" for="flexRadioDefault1">
+                                  Male
+                                </label>
+                              </div>
+                              <div class="form-check mx-4">
+                                <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault2" >
+                                <label class="form-check-label" for="flexRadioDefault2">
+                                  Female
+                                </label>
+                              </div>
+                        </div>
+                    </div>
+            </div>
+                <div class="form-row d-flex mt-4">
+
+                    <div class="form-group col-sm-6">
+                        <label for="inputState">College / University  </label>
+                        <select id="" class="form-control area" required  style="width: 75%;">
+                            <option disabled selected value="">Choose College / University</option>
+                      
+                        </select>
+                    </div>
+                    <div class="form-group col-sm-6 ">
+                        <label for="DOB">Date Of Birth</label>
+                        <input type="date" class="form-control DOB border-light" id="DOB"  required style=" border-style: outset; width: 45%;">
+
+                    </div>           
+                </div>
+
+                <div class="my-4" >
+                    <div class="my-3">Skill Bar</div>
+                    <div class="d-flex align-items-center my-4">
+                      <div class="mx-4" style="width: 85px;" >HTML</div>
+                      <div class="d-flex align-items-center">
+                        <div class="mx-2">0</div>
+                        <input id="range" type="range" min="0" max="100" value="80" step="1" style="width: 300px;">
+                        <div class="range-value mx-2" id="rangeV"></div>
+                      </div>
+    
+                        </div>
+                    </div>
+                    <div class="d-flex align-items-center my-4">
+                        <div class="mx-4" style="width: 85px;" >CSS</div>
+                        <div class="d-flex align-items-center">
+                          <div class="mx-2">0</div>
+                          <input id="css" type="range" min="0" max="100" value="72" step="1" style="width: 300px;">
+                          <div class="range-value mx-2" id="cssV"></div>
+                        </div>
+      
+                          </div>
+                          <div class="d-flex align-items-center my-4">
+                            <div class="mx-4" style="width: 85px;" >JAVASCRIPT</div>
+                            <div class="d-flex align-items-center">
+                              <div class="mx-2">0</div>
+                              <input id="js" type="range" min="0" max="100" value="42" step="1" style="width: 300px;">
+                              <div class="range-value mx-2" id="jsV"></div>
+                            </div>
+          
+                          </div>
+                  </div>
+
+                <button type="submit" class="btn btn-primary mb-5 mt-2 " id="btnsub" style="width: fit-content;">Submit</button>
+            </form>
+        </div>
+    </div>
+    </div>
+    </div>
+
+    <script type="text/javascript">
+        
+        
+      const
+        range = document.getElementById('range'),
+        rangeV = document.getElementById('rangeV'),
+        setValue = ()=>{
+            const
+            newValue = Number( (range.value - range.min) * 100 / (range.max - range.min) ),
+            newPosition = 10 - (newValue * 0.2);
+            rangeV.innerHTML = `<span>${range.value}</span>`;
+
+        };
+        document.addEventListener("DOMContentLoaded", setValue);
+        range.addEventListener('input', setValue);
+
+      const
+        css = document.getElementById('css'),
+        cssV = document.getElementById('cssV'),
+        setCssValue = ()=>{
+            const
+            newValue = Number( (css.value - css.min) * 100 / (css.max - css.min) ),
+            newPosition = 10 - (newValue * 0.2);
+            cssV.innerHTML = `<span>${css.value}</span>`;
+         };
+        document.addEventListener("DOMContentLoaded", setCssValue);
+        css.addEventListener('input', setCssValue);
+
+      const
+          js = document.getElementById('js'),
+          jsV = document.getElementById('jsV'),
+          setJsValue = ()=>{
+            const
+            newValue = Number( (js.value - js.min) * 100 / (js.max - js.min) ),
+            newPosition = 10 - (newValue * 0.2);
+            jsV.innerHTML = `<span>${js.value}</span>`;
+          };
+          document.addEventListener("DOMContentLoaded", setJsValue);
+          js.addEventListener('input', setJsValue);
+    
+
+      $('#form').submit(function(e) {
+      e.preventDefault();
+      $("#ModalLong").modal('show');
+      $("#modal-fname").html($("#fname").val());
+      $("#modal-lname").html($("#lname").val());
+      $("#modal-email").html($("#email").val());
+      $("#modal-Mnos").html($("#mobile").val());
+      $("#modal-clg").html($("#college").val());
+      $("#modal-dob").html($("#DOB").val());
+      });
+
+
+      let fetchRes = fetch("http://universities.hipolabs.com/search?country=India");
+        fetchRes.then(res =>
+            res.json()).then(d => {
+          d.map(e=>{
+            const newOption = document.createElement('option');
+            const optionText = document.createTextNode(e.name);
+            newOption.appendChild(optionText);
+            newOption.setAttribute('value','Option Value');
+            const select = document.querySelector('select');
+            select.appendChild(newOption);
+             console.log(e.name)
+            })
+          })
+      
+    </script>
+
+    
+    
+  </body>
+</html>
